@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Nuxt />
-    <Footer id="footer" />
+    <Footer />
   </div>
 </template>
 
@@ -13,9 +13,5 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-#footer {
-  margin-top: auto;
 }
 </style>
