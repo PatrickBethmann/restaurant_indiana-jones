@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="contacts"></div>
     <fieldset disabled>
       <form class="contact-form" action="">
         <label for="firstname">Vorname</label>
