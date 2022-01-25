@@ -4,7 +4,7 @@
       <div class="headerLeft">
         <h2 class="headerTitle">McJones</h2>
         <p class="headerDescription">
-          Wilkommen auf meiner Website! In meinem Restaurant gibt es viele
+          Wilkommen auf unserer Website! In unserem Restaurant gibt es viele
           leckere Gerichte!
         </p>
       </div>
