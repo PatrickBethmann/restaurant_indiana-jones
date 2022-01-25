@@ -34,7 +34,7 @@ export default {
 
   /* Design */
   border-radius: 20px;
-  background-color: lightcoral;
+  background-color: rgba(0, 0, 0, 0.2);
 
   display: flex;
   flex-direction: row;
