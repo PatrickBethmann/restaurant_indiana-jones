@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto&display=swap');
+@font-face {
+  font-family: 'Steamed';
+  src: url(../fonts/Steamed.otf);
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', 'Road Rage', 'Arial', sans-serif;
 }
 
 body {
   background-color: #f3f3f3;
-  min-height: 100vh;
 }
