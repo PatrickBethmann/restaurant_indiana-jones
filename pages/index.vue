@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1>Startseite</h1>
+  <div class="main">
     <div class="header">
       <div class="headerLeft">
         <h2 class="headerTitle">McJones</h2>
@@ -23,6 +22,9 @@ export default {
 </script>
 
 <style>
+.main {
+  margin-top: 50px;
+}
 .header {
   /* Position */
   margin: auto;
