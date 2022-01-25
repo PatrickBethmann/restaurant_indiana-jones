@@ -18,6 +18,8 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
   align-content: center;
+
+  margin-top: auto;
 }
 footer a {
   display: flex;
