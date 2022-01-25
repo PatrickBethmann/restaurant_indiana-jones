@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <NuxtLink to="/contact" class="link">Kontakt</NuxtLink>
+    <NuxtLink to="/contact" class="link-light">Kontakt</NuxtLink>
   </footer>
 </template>
 
@@ -11,8 +11,8 @@ export default {}
 <style scoped>
 footer {
   width: 100%;
-  height: 50px;
-  background: rgba(0, 0, 0, 0.2);
+  height: 75px;
+  background: gray;
 
   display: flex;
   flex-direction: row;
@@ -20,8 +20,8 @@ footer {
   align-content: center;
 }
 footer a {
-  color: black;
   display: flex;
+  font-size: 1.5rem;
   align-items: center;
 }
 </style>

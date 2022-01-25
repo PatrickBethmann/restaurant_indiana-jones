@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-white">
+    <nav class="navbar navbar-expand-sm navbar-light">
       <div class="container-fluid">
         <div id="navbarExample01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
