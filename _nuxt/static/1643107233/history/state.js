@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fyour-github-repository-name\u002F_nuxt\u002Fstatic\u002F1643107233",layout:"default",error:a,serverRendered:true,routePath:"\u002Fhistory",config:{_app:{basePath:"\u002Fyour-github-repository-name\u002F",assetsPath:"\u002Fyour-github-repository-name\u002F_nuxt\u002F",cdnURL:a}}}}(null));
