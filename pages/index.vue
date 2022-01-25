@@ -9,7 +9,10 @@
         </p>
       </div>
       <div class="headerRight">
-        <img src="/profile-picture.png" alt="Picture of Indiana Jones" />
+        <img
+          src="~/assets/images/profile-picture.png"
+          alt="Picture of Indiana Jones"
+        />
       </div>
     </div>
   </div>
