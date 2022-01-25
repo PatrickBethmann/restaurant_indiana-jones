@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>Geschichte</h1>
-  </div>
+  <div></div>
 </template>
 
 <script>
@@ -9,3 +7,5 @@ export default {
   name: 'HistoryPage',
 }
 </script>
+
+<style scoped></style>
