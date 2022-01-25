@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 header {
-  background-color: lightsalmon;
+  background-color: gray;
   height: 100px;
 
   display: flex;
