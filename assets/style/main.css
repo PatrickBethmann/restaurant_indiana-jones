@@ -11,3 +11,11 @@ body {
   margin: 0;
   min-height: 100vh;
 }
+
+html,
+body,
+#__nuxt,
+#__layout {
+  min-height: 100% !important;
+  width: 100% !important;
+}

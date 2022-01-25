@@ -1,7 +1,6 @@
 <template>
   <footer>
-    <a href="">Impressum</a>
-    <a href="">Kontakt</a>
+    <NuxtLink to="/contact" class="link">Kontakt</NuxtLink>
   </footer>
 </template>
 
@@ -11,8 +10,6 @@ export default {}
 
 <style scoped>
 footer {
-  position: absolute;
-  bottom: 0px;
   width: 100%;
   height: 50px;
   background: rgba(0, 0, 0, 0.2);
