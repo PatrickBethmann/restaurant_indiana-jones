@@ -1,9 +1,21 @@
 <template>
-  <div>
+  <div id="app">
     <Header />
     <Nuxt />
-    <Footer />
+    <Footer id="footer" />
   </div>
 </template>
 
-<style></style>
+<style>
+#app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#footer {
+  margin-top: auto;
+}
+</style>
