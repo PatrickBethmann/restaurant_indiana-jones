@@ -1,6 +1,11 @@
 <template>
   <div>
     <b-button v-b-modal.guestbookModal>Neuer Eintrag</b-button>
+    <GuestbookEntry
+      v-for="entry in guestbookEntries"
+      :key="entry.id"
+      :entry="entry"
+    />
 
     <b-modal
       id="guestbookModal"
@@ -65,23 +70,30 @@ export default {
     return {
       name: '',
       nameState: null,
-      submittedNames: [],
       date: '',
       dateState: null,
-      submittedDates: [],
       time: '',
       timeState: null,
-      submittedTimes: [],
+      guestbookEntries: [],
+    }
+  },
+  watch: {
+    // Keeps the localStorage up to date
+    guestbookEntries() {
+      localStorage.setItem('guestbook', JSON.stringify(this.guestbookEntries))
+    },
+  },
+  mounted() {
+    // Loading stored guestbook entries
+    if (localStorage.guestbook) {
+      this.guestbookEntries = JSON.parse(
+        localStorage.getItem('guestbook') || '[]'
+      )
     }
   },
 
   methods: {
     checkFormValidity() {
-      // const valid = this.$refs.form.checkValidity()
-      // console.log(valid)
-      // this.nameState = valid
-      // this.dateState = valid
-      // this.timeState = valid
       if (this.name) {
         this.nameState = true
       } else {
@@ -122,10 +134,12 @@ export default {
       if (!this.checkFormValidity()) {
         return
       }
-      // Push the name, date and time to submitted arrays
-      this.submittedNames.push(this.name)
-      this.submittedDates.push(this.date)
-      this.submittedTimes.push(this.time)
+      // create new entry in guestbookEntries array
+      this.createEntry()
+    },
+    createEntry() {
+      const newEntry = { name: this.name, date: this.date, time: this.time }
+      this.guestbookEntries.push(newEntry)
     },
   },
 }
