@@ -2,7 +2,7 @@
   <b-card
     :title="entry.name"
     tag="article"
-    style="width: 51%; margin: auto"
+    style="width: 52%; margin: auto"
     class="mb-2 text-center"
   >
     <b-card-text>
