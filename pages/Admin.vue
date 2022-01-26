@@ -17,8 +17,12 @@
           v-model="form.username"
           type="text"
           placeholder="Benutzername..."
+          :state="validateUsername"
           required
         ></b-form-input>
+        <b-form-invalid-feedback :state="validateUsername">
+          Dein Benutzername muss 5-12 Zeichen lang sein.
+        </b-form-invalid-feedback>
       </b-form-group>
 
       <!-- Password -->
@@ -32,8 +36,12 @@
           v-model="form.password"
           placeholder="Passwort..."
           type="password"
+          :state="validatePassword"
           required
         ></b-form-input>
+        <b-form-invalid-feedback :state="validateUsername">
+          Dein Passwort muss mindestens 5 Zeichen lang sein.
+        </b-form-invalid-feedback>
       </b-form-group>
 
       <b-button type="submit" variant="primary">Login</b-button>
@@ -72,6 +80,14 @@ export default {
       },
       loggedIn: false,
     }
+  },
+  computed: {
+    validateUsername() {
+      return this.form.username.length > 4 && this.form.username.length < 13
+    },
+    validatePassword() {
+      return this.form.password.length > 4
+    },
   },
   watch: {
     // Keeps the login status up to date
