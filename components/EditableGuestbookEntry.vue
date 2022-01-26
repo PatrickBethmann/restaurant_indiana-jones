@@ -1,15 +1,32 @@
 <template>
   <b-card
     tag="article"
-    style="width: 52%; margin: auto text-light"
-    class="mb-2 text-center"
+    style="width: 52%; margin: auto; background-color: rgba(0, 0, 0, 0.25)"
+    class="mb-2 text-center text-light blur"
   >
     <span>Name:</span>
-    <b-input id="name" v-model="name" placeholder="Name" />
+    <b-input
+      id="name"
+      v-model="name"
+      class="bg-dark text-light"
+      placeholder="Name"
+    />
     <span>Datum:</span>
-    <b-input id="date" v-model="date" type="date" placeholder="Name" />
+    <b-input
+      id="date"
+      v-model="date"
+      class="bg-dark text-light"
+      type="date"
+      placeholder="Name"
+    />
     <span>Uhrzeit:</span>
-    <b-input id="time" v-model="time" type="time" placeholder="Name" />
+    <b-input
+      id="time"
+      v-model="time"
+      class="bg-dark text-light"
+      type="time"
+      placeholder="Name"
+    />
 
     <b-button variant="outline-primary" @click="deleteEntry()">Delete</b-button>
     <b-button variant="outline-success" @click="saveEntry()"

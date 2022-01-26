@@ -60,7 +60,7 @@
 
     <b-button
       v-if="loggedIn"
-      class="w-25 mt-2 mb-2 text-danger"
+      class="w-25 mt-2 mb-2 text-dark bg-light"
       @click="loggedIn = false"
       >Log out</b-button
     >
