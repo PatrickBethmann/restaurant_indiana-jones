@@ -2,7 +2,7 @@
   <div class="column text-center">
     <b-form
       v-if="!loggedIn"
-      class="w-50 m-auto"
+      class="w-50 m-auto blur p-5 rounded-pill overflow-hidden text-light"
       @submit="onSubmit"
       @reset="onReset"
     >
@@ -143,12 +143,8 @@ export default {
       this.guestbookEntries.splice(index, 1)
     },
     updateEntry(updatedEntry, index) {
-      alert(updatedEntry.date)
-
       this.guestbookEntries[index] = updatedEntry
       localStorage.setItem('guestbook', JSON.stringify(this.guestbookEntries))
-
-      alert(this.guestbookEntries[index].date)
     },
   },
 }

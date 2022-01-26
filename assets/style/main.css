@@ -16,5 +16,11 @@ body {
 .blur {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.border-white {
+  border: rgb(255, 255, 255) solid 1px;
+}
+.rounded-50 {
+  border-radius: 50px;
 }

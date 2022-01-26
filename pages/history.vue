@@ -1,18 +1,22 @@
 <template>
   <div class="flex-column m-auto align-items-center" stlye="padding: 48px">
-    <h1>Unsere Geschichte</h1>
+    <h1 class="text-light">Unsere Geschichte</h1>
     <div class="vtl">
-      <div class="event">
+      <div class="event blur">
         <strong class="edate">1. Juli 1899</strong>
-        <p class="etxt">Geburt des Geschäftsführers in Princeton, New Jersey</p>
+        <p class="etxt text-light">
+          Geburt des Geschäftsführers in Princeton, New Jersey
+        </p>
       </div>
-      <div class="event">
+      <div class="event blur">
         <strong class="edate">11 November 2021</strong>
-        <p class="etxt">Aus Langeweile eine Restaurant gegründet.</p>
+        <p class="etxt text-light">Aus Langeweile eine Restaurant gegründet.</p>
       </div>
-      <div class="event">
+      <div class="event blur">
         <strong class="edate">27 Januar 2022</strong>
-        <p class="etxt">Eigene Website erblickt das Licht der Welt!</p>
+        <p class="etxt text-light">
+          Eigene Website erblickt das Licht der Welt!
+        </p>
       </div>
     </div>
   </div>
@@ -51,7 +55,7 @@ export default {
 /* (C) STYLES FOR THE EVENTS */
 div.event {
   padding: 20px 30px;
-  background-color: #ffebeb;
+  /* background-color: #ffebeb; */
   position: relative;
   border-radius: 6px;
   margin-bottom: 10px;

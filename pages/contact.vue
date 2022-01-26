@@ -1,5 +1,5 @@
 <template>
-  <div class="container blur">
+  <div class="container blur rounded-50 overflow-hidden">
     <div class="contacts"></div>
     <fieldset disabled class="">
       <form class="contact-form" action="">

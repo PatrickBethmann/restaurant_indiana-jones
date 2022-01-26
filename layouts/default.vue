@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="bg-image">
     <Header />
-    <Nuxt />
+    <Nuxt class="mt-5 mb-5" />
     <Footer />
   </div>
 </template>

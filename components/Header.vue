@@ -28,14 +28,10 @@
     </nav>
     <!-- Navbar -->
 
-    <div class="p-5 text-center bg-image" :style="{}">
+    <div class="text-center bg-image border-bottom" :style="{}">
       <div
         class="mask blur"
-        style="
-          background-color: rgba(0, 0, 0, 0.2);
-          border-radius: 20px;
-          height: 250px;
-        "
+        style="background-color: rgba(0, 0, 0, 0.2); height: 250px"
       >
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
