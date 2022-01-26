@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="bg-dark">
     <NuxtLink to="/contact" class="link-light">Kontakt</NuxtLink>
   </footer>
 </template>
@@ -12,7 +12,6 @@ export default {}
 footer {
   width: 100%;
   height: 75px;
-  background: gray;
 
   display: flex;
   flex-direction: row;

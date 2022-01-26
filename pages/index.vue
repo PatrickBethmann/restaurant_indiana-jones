@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="header">
+    <div class="header text-light blur">
       <div class="headerLeft">
         <h2 class="headerTitle">McJones</h2>
         <p class="headerDescription">
@@ -26,18 +26,20 @@ export default {
 
 <style>
 .main {
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .header {
+  width: 100%;
   /* Position */
-  margin: auto;
   padding: 10px;
   height: 350px;
   width: 85%;
 
   /* Design */
-  border-radius: 20px;
-  background-color: #ffffff3f;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.25);
 
   display: flex;
   flex-direction: row;

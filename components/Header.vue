@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
         <div id="navbarExample01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -28,15 +28,15 @@
     </nav>
     <!-- Navbar -->
 
-    <!-- Background image -->
-    <div
-      class="p-5 text-center bg-image"
-      :style="{
-        'background-image': `url('https://cdn.pixabay.com/photo/2013/12/31/21/47/restaurant-237060_960_720.jpg')`,
-        height: '400px',
-      }"
-    >
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+    <div class="p-5 text-center bg-image" :style="{}">
+      <div
+        class="mask blur"
+        style="
+          background-color: rgba(0, 0, 0, 0.2);
+          border-radius: 20px;
+          height: 250px;
+        "
+      >
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
             <h1 class="mb-3">McJones</h1>
@@ -45,7 +45,6 @@
         </div>
       </div>
     </div>
-    <!-- Background image -->
   </div>
 </template>
 
@@ -54,5 +53,3 @@ export default {
   name: 'Header',
 }
 </script>
-
-<style scoped></style>

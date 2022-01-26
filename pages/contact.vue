@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container blur">
     <div class="contacts"></div>
-    <fieldset disabled>
+    <fieldset disabled class="">
       <form class="contact-form" action="">
         <label for="firstname">Vorname</label>
         <input
