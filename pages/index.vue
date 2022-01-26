@@ -10,7 +10,9 @@
       </div>
       <div class="headerRight">
         <img
-          src="~/assets/images/profile-picture.png"
+          class="border border-dark border m-auto"
+          style="width: fit-content"
+          src="https://www.seekpng.com/png/full/45-452520_harrison-ford-png-indiana-jones-png.png"
           alt="Picture of Indiana Jones"
         />
       </div>
@@ -56,7 +58,8 @@ export default {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerTitle {

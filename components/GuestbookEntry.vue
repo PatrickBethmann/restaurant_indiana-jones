@@ -2,10 +2,10 @@
   <b-card
     :title="entry.name"
     tag="article"
-    style="width: 52%; margin: auto"
-    class="mb-2 text-center"
+    style="width: 52%; margin: auto; background-color: rgba(0, 0, 0, 0.25)"
+    class="mb-2 text-center blur text-light"
   >
-    <b-card-text>
+    <b-card-text class="">
       Datum: {{ entry.date }}
       <br />
       Uhrzeit: {{ entry.time }}

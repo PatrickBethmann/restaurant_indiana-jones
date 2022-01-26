@@ -1,7 +1,7 @@
 <template>
   <b-card
     tag="article"
-    style="width: 52%; margin: auto"
+    style="width: 52%; margin: auto text-light"
     class="mb-2 text-center"
   >
     <span>Name:</span>
