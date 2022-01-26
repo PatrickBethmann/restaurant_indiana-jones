@@ -1,5 +1,7 @@
 <template>
-  <div class="container blur rounded-50 border-white overflow-hidden">
+  <div
+    class="p-3 container blur rounded-50 border-white text-light overflow-hidden"
+  >
     <div class="contacts"></div>
     <fieldset disabled class="">
       <form class="contact-form" action="">
@@ -31,7 +33,12 @@
       </form>
     </fieldset>
     <div class="links">
-      <a href="mailto:indiana.jones@notexisting.com">Email</a>
+      <a
+        style="background-color: rgba(0, 0, 0, 0.5)"
+        class="text-light border-white rounded p-2 mb-3"
+        href="mailto:indiana.jones@notexisting.com"
+        >Email</a
+      >
     </div>
   </div>
 </template>
