@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="header text-light blur rounded-50">
+    <div class="header text-light blur rounded-50 p-5">
       <div class="headerLeft">
         <h2 class="headerTitle">McJones</h2>
         <p class="headerDescription">
@@ -40,8 +40,6 @@ export default {
   width: 85%;
 
   /* Design */
-  border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.25);
 
   display: flex;
   flex-direction: row;
