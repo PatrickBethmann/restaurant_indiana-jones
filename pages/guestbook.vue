@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <b-button v-b-modal.guestbookModal>Neuer Eintrag</b-button>
+  <div class="column text-center">
+    <b-button v-b-modal.guestbookModal class="w-25 mt-2 mb-2"
+      >Neuer Eintrag</b-button
+    >
+
     <GuestbookEntry
       v-for="entry in guestbookEntries"
       :key="entry.id"
