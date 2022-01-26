@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-image">
     <Header />
     <Nuxt />
     <Footer />
@@ -13,5 +13,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  background-image: url('https://cdn.pixabay.com/photo/2021/02/08/07/39/chef-5993951_960_720.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
