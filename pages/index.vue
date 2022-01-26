@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="header text-light blur rounded-50 p-5">
+    <div class="header text-light border-white blur rounded-50 p-5">
       <div class="headerLeft">
         <h2 class="headerTitle">McJones</h2>
         <p class="headerDescription">

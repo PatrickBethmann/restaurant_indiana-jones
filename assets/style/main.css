@@ -21,6 +21,9 @@ body {
 .border-white {
   border: rgb(255, 255, 255) solid 1px;
 }
+.border-black {
+  border: rgb(0, 0, 0) solid 1px;
+}
 .rounded-50 {
   border-radius: 50px;
 }

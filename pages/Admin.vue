@@ -2,7 +2,7 @@
   <div class="column text-center">
     <b-form
       v-if="!loggedIn"
-      class="w-50 m-auto blur p-5 rounded-pill overflow-hidden text-light"
+      class="w-50 m-auto blur p-5 rounded-50 overflow-hidden border-white text-light"
       @submit="onSubmit"
       @reset="onReset"
     >
@@ -47,7 +47,7 @@
       <b-button type="submit" variant="primary">Login</b-button>
     </b-form>
 
-    <div v-if="loggedIn" id="giestbook-entries">
+    <div v-if="loggedIn" id="guestbook-entries">
       <EditableGuestbookEntry
         v-for="(entry, index) in guestbookEntries"
         :key="index"

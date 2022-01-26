@@ -3,7 +3,7 @@
     :title="entry.name"
     tag="article"
     style="width: 52%; margin: auto; background-color: rgba(0, 0, 0, 0.25)"
-    class="mb-2 text-center blur text-light"
+    class="mb-2 text-center blur text-light border-white rounded-50"
   >
     <b-card-text class="">
       Datum: {{ entry.date }}

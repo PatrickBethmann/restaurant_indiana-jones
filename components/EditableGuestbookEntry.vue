@@ -2,7 +2,7 @@
   <b-card
     tag="article"
     style="width: 52%; margin: auto; background-color: rgba(0, 0, 0, 0.25)"
-    class="mb-2 text-center text-light blur"
+    class="mb-2 text-center blur text-light border-white rounded-50"
   >
     <span>Name:</span>
     <b-input
