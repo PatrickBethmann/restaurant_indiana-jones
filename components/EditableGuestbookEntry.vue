@@ -1,17 +1,20 @@
 <template>
   <b-card
-    :title="entry.name"
     tag="article"
     style="width: 52%; margin: auto"
     class="mb-2 text-center"
   >
-    <b-card-text>
-      Datum: {{ entry.date }}
-      <br />
-      Uhrzeit: {{ entry.time }}
-    </b-card-text>
+    <span>Name:</span>
+    <b-input id="name" v-model="name" placeholder="Name" />
+    <span>Datum:</span>
+    <b-input id="date" v-model="date" type="date" placeholder="Name" />
+    <span>Uhrzeit:</span>
+    <b-input id="time" v-model="time" type="time" placeholder="Name" />
 
-    <b-button>Delete</b-button>
+    <b-button variant="outline-primary" @click="deleteEntry()">Delete</b-button>
+    <b-button variant="outline-success" @click="saveEntry()"
+      >Speichern</b-button
+    >
   </b-card>
 </template>
 
@@ -21,6 +24,38 @@ export default {
     entry: {
       type: Object,
       default: null,
+    },
+    index: {
+      type: Number,
+      default: null,
+    },
+  },
+  data() {
+    return {
+      name: '',
+      date: '',
+      time: '',
+    }
+  },
+  mounted() {
+    this.name = this.entry.name
+    this.date = this.entry.date
+    this.time = this.entry.time
+  },
+  methods: {
+    deleteEntry() {
+      this.$emit('deleteEntry', this.index)
+    },
+    saveEntry() {
+      this.$emit(
+        'updateEntry',
+        {
+          name: this.name,
+          date: this.date,
+          time: this.time,
+        },
+        this.index
+      )
     },
   },
 }

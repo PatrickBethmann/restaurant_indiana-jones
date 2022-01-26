@@ -40,10 +40,13 @@
     </b-form>
 
     <div v-if="loggedIn" id="giestbook-entries">
-      <GuestbookEntry
-        v-for="entry in guestbookEntries"
-        :key="entry.id"
+      <EditableGuestbookEntry
+        v-for="(entry, index) in guestbookEntries"
+        :key="index"
+        :index="index"
         :entry="entry"
+        @deleteEntry="deleteEntry"
+        @updateEntry="updateEntry"
       />
     </div>
 
@@ -62,6 +65,7 @@ export default {
     return {
       username: 'Admin',
       password: '12345',
+      guestbookEntries: [],
       form: {
         username: '',
         password: '',
@@ -82,8 +86,6 @@ export default {
   mounted() {
     if (localStorage.loggedIn) {
       this.loggedIn = JSON.parse(localStorage.getItem('loggedIn') || 'false')
-      console.log('hi')
-      console.log(this.loggedIn)
     }
     if (localStorage.guestbook) {
       this.guestbookEntries = JSON.parse(
@@ -116,12 +118,21 @@ export default {
         username === this.username.toLowerCase() &&
         password === this.password
       ) {
-        alert('Succes')
         return true
       } else {
-        alert('wrong input')
         return false
       }
+    },
+    deleteEntry(index) {
+      this.guestbookEntries.splice(index, 1)
+    },
+    updateEntry(updatedEntry, index) {
+      alert(updatedEntry.date)
+
+      this.guestbookEntries[index] = updatedEntry
+      localStorage.setItem('guestbook', JSON.stringify(this.guestbookEntries))
+
+      alert(this.guestbookEntries[index].date)
     },
   },
 }
