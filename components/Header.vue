@@ -19,6 +19,9 @@
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/guestbook">Gästebuch</NuxtLink>
             </li>
+            <li class="nav-item ms-auto">
+              <NuxtLink class="nav-link" to="/admin">Admin</NuxtLink>
+            </li>
           </ul>
         </div>
       </div>
@@ -52,39 +55,4 @@ export default {
 }
 </script>
 
-<style scoped>
-/* header {
-  background-color: gray;
-  height: 100px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header h1 {
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
-  line-height: 50px;
-}
-
-nav {
-  background-color: lightgray;
-  height: 50px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.link {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-}
-.nuxt-link-exact-active {
-  font-weight: bold;
-} */
-</style>
+<style scoped></style>
