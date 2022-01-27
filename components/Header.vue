@@ -3,7 +3,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
-        <div id="navbarExample01">
+        <div id="navbarExample01" class="w-100">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
               <NuxtLink class="nav-link" aria-current="page" to="/"
@@ -18,6 +18,9 @@
             </li>
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/guestbook">Gästebuch</NuxtLink>
+            </li>
+            <li class="nav-item">
+              <NuxtLink class="nav-link" to="/order">Order</NuxtLink>
             </li>
             <li class="nav-item ms-auto">
               <NuxtLink class="nav-link" to="/admin">Admin</NuxtLink>
