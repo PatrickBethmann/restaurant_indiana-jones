@@ -15,7 +15,6 @@
             08:00 Uhr - 12:00 Uhr <br />
             13:30 Uhr - 18:30 Uhr
           </p>
-          <br class="h4" />
         </div>
       </div>
       <div class="headerRight">
