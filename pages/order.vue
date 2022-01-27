@@ -55,6 +55,14 @@
       >
         Bestellen
       </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        style="margin-bottom: -50px"
+        @click="clearOrders()"
+      >
+        Zurücksetzen
+      </button>
     </div>
   </div>
 </template>
@@ -122,6 +130,13 @@ export default {
   methods: {
     addItemToOrders(index) {
       this.placedOrders.push(this.menu[index])
+    },
+    clearOrders() {
+      this.placedOrders = []
+    },
+    placeOrder() {
+      alert('Vielen Danke für deine Bestellung')
+      this.clearOrders()
     },
   },
 }
