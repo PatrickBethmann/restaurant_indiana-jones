@@ -2,16 +2,16 @@
   <div class="main">
     <div class="header text-light border-white blur rounded-50 p-5">
       <div class="headerLeft">
-        <h2 class="headerTitle">McJones</h2>
-        <p class="headerDescription">
+        <h2 class="headerTitle h1">McJones</h2>
+        <p class="headerDescription h2">
           Wilkommen auf unserer Website! In unserem Restaurant gibt es viele
           leckere Gerichte!
         </p>
       </div>
       <div class="headerRight">
         <img
-          class="border border-dark border m-auto"
-          style="width: fit-content"
+          class="border border-dark border m-auto rounded-circle"
+          style=""
           src="https://www.seekpng.com/png/full/45-452520_harrison-ford-png-indiana-jones-png.png"
           alt="Picture of Indiana Jones"
         />
@@ -60,18 +60,9 @@ export default {
   align-items: center;
 }
 
-.headerTitle {
-  font-size: 3rem;
-}
-.headerDescription {
-  font-size: 2rem;
-}
-
 .headerRight img {
   object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  width: 300px;
+  height: 300px;
 }
 </style>
