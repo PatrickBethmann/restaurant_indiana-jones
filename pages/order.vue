@@ -86,6 +86,11 @@ export default {
           price: 2.49,
           image: 'https://cdn-icons-png.flaticon.com/512/938/938114.png',
         },
+        {
+          name: 'Hamburger',
+          price: 2.99,
+          image: 'https://cdn-icons-png.flaticon.com/512/3075/3075929.png',
+        },
       ],
       placedOrders: [],
     }
