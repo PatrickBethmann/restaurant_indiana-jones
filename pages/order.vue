@@ -44,7 +44,7 @@
           {{ order.price.toString().replace('.', ',') }}€
         </div>
       </li>
-      <div class="mt-3 ms-auto">
+      <div class="mt-3">
         Gesamtpreis: {{ totalPrice.toString().replace('.', ',') }}€
       </div>
       <button
