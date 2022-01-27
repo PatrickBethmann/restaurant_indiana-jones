@@ -74,7 +74,7 @@ export default {
       this.placedOrders = []
     },
     placeOrder() {
-      alert('Vielen Danke für Ihre Bestellung')
+      alert('Vielen Dank für Ihre Bestellung')
       this.placedOrders = []
     },
   },
