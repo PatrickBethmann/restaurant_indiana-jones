@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-dark">
+  <footer class="bg-dark border-top">
     <NuxtLink to="/contact" class="link-light">Kontakt</NuxtLink>
   </footer>
 </template>
