@@ -35,7 +35,7 @@
 
         <!-- Message -->
         <b-form-group
-          label="message"
+          label="Nachricht"
           label-for="message-input"
           :state="messageState"
         >
