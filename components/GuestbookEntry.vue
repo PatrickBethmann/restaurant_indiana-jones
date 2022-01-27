@@ -6,9 +6,14 @@
     class="mb-2 text-center blur text-light border-white"
   >
     <b-card-text class="">
-      Datum: {{ entry.date }}
-      <br />
-      Uhrzeit: {{ entry.time }}
+      <div v-if="entry.message != ''">
+        <br />
+        {{ entry.message }}
+        <br />
+        <br />
+      </div>
+      {{ entry.date }}
+      {{ entry.time }}
     </b-card-text>
   </b-card>
 </template>

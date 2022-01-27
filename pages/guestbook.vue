@@ -32,36 +32,18 @@
             required
           ></b-form-input>
         </b-form-group>
-        <!-- Datum -->
-        <b-form-group
-          label="Datum"
-          label-for="date-input"
-          invalid-feedback="Datum ist erforderlich"
-          :state="dateState"
-        >
-          <b-form-datepicker
-            id="date-input"
-            v-model="date"
-            :state="dateState"
-            placeholder="Datum auswählen"
-            required
-          ></b-form-datepicker>
-        </b-form-group>
 
-        <!-- Uhrzeit -->
+        <!-- Message -->
         <b-form-group
-          label="Uhrzeit"
-          label-for="time-input"
-          invalid-feedback="Uhrzeit ist erforderlich"
-          :state="timeState"
+          label="message"
+          label-for="message-input"
+          :state="messageState"
         >
-          <b-form-timepicker
-            id="time-input"
-            v-model="time"
-            :state="timeState"
-            placeholder="Uhrzeit auswählen"
-            required
-          ></b-form-timepicker>
+          <b-form-input
+            id="message-input"
+            v-model="message"
+            :state="messageState"
+          ></b-form-input>
         </b-form-group>
       </form>
     </b-modal>
@@ -74,10 +56,7 @@ export default {
     return {
       name: '',
       nameState: null,
-      date: '',
-      dateState: null,
-      time: '',
-      timeState: null,
+      message: '',
       guestbookEntries: [],
     }
   },
@@ -103,17 +82,7 @@ export default {
       } else {
         this.nameState = false
       }
-      if (this.date) {
-        this.dateState = true
-      } else {
-        this.dateState = false
-      }
-      if (this.time) {
-        this.timeState = true
-      } else {
-        this.timeState = false
-      }
-      if (this.nameState && this.dateState && this.timeState) {
+      if (this.nameState) {
         return true
       }
       return false
@@ -121,10 +90,6 @@ export default {
     resetModal() {
       this.name = ''
       this.nameState = null
-      this.date = ''
-      this.dateState = null
-      this.time = ''
-      this.timeState = null
     },
     handleOk(bvModalEvt) {
       // Prevent modal from closing
@@ -142,7 +107,17 @@ export default {
       this.createEntry()
     },
     createEntry() {
-      const newEntry = { name: this.name, date: this.date, time: this.time }
+      const date = new Date()
+      const currentDate = `${date.toLocaleDateString()}`
+      const currentTime = `${
+        date.getHours() < 10 ? '0' : ''
+      }${date.getHours()}:${date.getMinutes()} Uhr`
+      const newEntry = {
+        name: this.name,
+        message: this.message,
+        date: currentDate,
+        time: currentTime,
+      }
       this.guestbookEntries.push(newEntry)
     },
   },
