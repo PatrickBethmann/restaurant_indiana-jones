@@ -25,45 +25,11 @@
       </div>
     </div>
 
-    <div
-      v-if="placedOrders.length > 0"
-      id="order-list"
-      class="border-white text-center rounded-50 blur w-25 text-light p-5"
-      style="margin-right: 25px; height: fit-content"
-    >
-      <div class="h2">Bestellungen</div>
-      <ul></ul>
-      <li
-        v-for="(order, index) in placedOrders"
-        :key="index"
-        class="d-flex justify-content-between"
-      >
-        <div>{{ order.name }}</div>
-
-        <div class="float-right">
-          {{ order.price.toString().replace('.', ',') }}€
-        </div>
-      </li>
-      <div class="mt-3">
-        Gesamtpreis: {{ totalPrice.toString().replace('.', ',') }}€
-      </div>
-      <button
-        type="button"
-        class="btn btn-primary"
-        style="margin-bottom: -50px"
-        @click="placeOrder()"
-      >
-        Bestellen
-      </button>
-      <button
-        type="button"
-        class="btn btn-danger"
-        style="margin-bottom: -50px"
-        @click="clearOrders()"
-      >
-        Zurücksetzen
-      </button>
-    </div>
+    <OrderList
+      :placed-orders="placedOrders"
+      @placeOrder="placeOrder()"
+      @clearOrders="clearOrders()"
+    />
   </div>
 </template>
 
@@ -81,13 +47,13 @@ export default {
           name: 'Soup',
           price: 1.99,
           image:
-            'https://cdn-icons.flaticon.com/png/512/2387/premium/2387954.png?token=exp=1643264684~hmac=419e0f5cda4d71099f5e91382b1c1a2c',
+            'https://cdn-icons.flaticon.com/png/512/2387/premium/2387954.png?token=exp=1643281638~hmac=e1d722fdb83dc429b8d39a1d1077f306',
         },
         {
           name: 'Fish',
           price: 4.99,
           image:
-            'https://cdn-icons.flaticon.com/png/512/2346/premium/2346909.png?token=exp=1643264710~hmac=bd04ef8a0a3a7a8472939cd4597040f1',
+            'https://cdn-icons.flaticon.com/png/512/2346/premium/2346909.png?token=exp=1643281672~hmac=1af497e6f69e0a2b8e8fea167d795e77',
         },
         {
           name: 'Ice',
@@ -103,16 +69,7 @@ export default {
       placedOrders: [],
     }
   },
-  computed: {
-    totalPrice() {
-      let price = 0
-      for (const order of this.placedOrders) {
-        price += order.price
-      }
 
-      return Math.round(price * 100) / 100
-    },
-  },
   watch: {
     // Keeps the localStorage up to date
     placedOrders() {
@@ -135,8 +92,7 @@ export default {
       this.placedOrders = []
     },
     placeOrder() {
-      alert('Vielen Danke für deine Bestellung')
-      this.clearOrders()
+      alert('Vielen Danke für Ihre Bestellung')
     },
   },
 }
