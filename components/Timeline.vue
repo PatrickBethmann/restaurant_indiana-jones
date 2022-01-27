@@ -1,6 +1,6 @@
 <template>
   <div class="flex-column m-auto align-items-center" stlye="padding: 48px">
-    <h1 class="text-light text-center">Unsere Geschichte</h1>
+    <h1 class="text-light text-center outlined">Unsere Geschichte</h1>
     <div class="vtl">
       <div class="event blur border-white">
         <strong class="edate">1. Juli 1899</strong>
