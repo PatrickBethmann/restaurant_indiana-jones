@@ -1,15 +1,24 @@
 <template>
-  <div class="d-flex justify-content-evenly">
-    <div v-for="(dish, index) in menu" :key="index">
-      <div
-        class="blur d-flex rounded-50 border-white flex-column justify-content-evenly align-items-center gap-2 w-75 h-75"
-      >
-        <b-img
-          :src="dish.image"
-          style="max-height: 50%; max-width: 100%; height: auto; width: auto"
-        ></b-img>
-        <p class="text-light h1">{{ dish.name }}</p>
-        <button type="button" class="btn btn-primary">Bestellen</button>
+  <div>
+    <!-- section -->
+    <div class="d-flex flex-wrap justify-content-evenly">
+      <div v-for="(dish, index) in menu" :key="index">
+        <div
+          class="m-auto blur d-flex rounded-50 border-white flex-column justify-content-evenly align-items-center gap-2 w-75 h-75"
+        >
+          <b-img
+            :src="dish.image"
+            style="max-height: 50%; max-width: 100%; height: auto; width: auto"
+          ></b-img>
+          <p class="text-light h1">{{ dish.name }}</p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            @click="orderItem(index)"
+          >
+            Bestellen
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -39,7 +48,14 @@ export default {
           image: 'https://cdn-icons-png.flaticon.com/512/938/938114.png',
         },
       ],
+      placedOrders: [],
     }
+  },
+  methods: {
+    orderItem(index) {
+      this.placedOrders.push(this.menu[index].name)
+      alert(this.placedOrders)
+    },
   },
 }
 </script>
