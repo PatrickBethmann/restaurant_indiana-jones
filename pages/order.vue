@@ -24,10 +24,11 @@
         </div>
       </div>
     </div>
+
     <div
       v-if="placedOrders.length > 0"
       id="order-list"
-      class="border-white rounded-50 blur w-25 text-light p-5"
+      class="border-white text-center rounded-50 blur w-25 text-light p-5"
       style="margin-right: 25px; height: fit-content"
     >
       <div class="h2">Bestellungen</div>
@@ -46,6 +47,14 @@
       <div class="mt-3 ms-auto">
         Gesamtpreis: {{ totalPrice.toString().replace('.', ',') }}€
       </div>
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="margin-bottom: -50px"
+        @click="placeOrder()"
+      >
+        Bestellen
+      </button>
     </div>
   </div>
 </template>
