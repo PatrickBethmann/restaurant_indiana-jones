@@ -3,25 +3,7 @@
     <!-- section -->
     <div class="d-flex flex-wrap justify-content-evenly">
       <div v-for="(dish, index) in menu" :key="index">
-        <div
-          class="m-auto blur d-flex rounded-50 border-white flex-column justify-content-evenly align-items-center gap-2 w-75 h-75"
-        >
-          <b-img
-            :src="dish.image"
-            style="max-height: 50%; max-width: 100%; height: auto; width: auto"
-          ></b-img>
-          <p class="text-light h1">{{ dish.name }}</p>
-          <p class="text-light h1">
-            {{ dish.price.toString().replace('.', ',') }}€
-          </p>
-          <button
-            type="button"
-            class="btn btn-primary"
-            @click="addItemToOrders(index)"
-          >
-            Hinzufügen
-          </button>
-        </div>
+        <DishCard :dish="dish" @addItemToOrders="addItemToOrders(index)" />
       </div>
     </div>
 
@@ -93,6 +75,7 @@ export default {
     },
     placeOrder() {
       alert('Vielen Danke für Ihre Bestellung')
+      this.placedOrders = []
     },
   },
 }
