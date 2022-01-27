@@ -7,10 +7,20 @@
           Wilkommen auf unserer Website! In unserem Restaurant gibt es viele
           leckere Gerichte!
         </p>
+
+        <div class="headerDescription h2">
+          <p class="h2 mt-4">Öffnungszeiten</p>
+          <p class="h3">Montag - Freitag</p>
+          <p class="h4">
+            08:00 Uhr - 12:00 Uhr <br />
+            13:30 Uhr - 18:30 Uhr
+          </p>
+          <br class="h4" />
+        </div>
       </div>
       <div class="headerRight">
         <img
-          class="border border-dark border m-auto rounded-circle"
+          class="border border-white border m-auto rounded-circle"
           style=""
           src="https://www.seekpng.com/png/full/45-452520_harrison-ford-png-indiana-jones-png.png"
           alt="Picture of Indiana Jones"
@@ -33,10 +43,9 @@ export default {
   align-items: center;
 }
 .header {
-  width: 100%;
   /* Position */
   padding: 10px;
-  height: 350px;
+  height: 400px;
   width: 85%;
 
   /* Design */
