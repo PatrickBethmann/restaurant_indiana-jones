@@ -20,7 +20,7 @@
               <NuxtLink class="nav-link" to="/guestbook">Gästebuch</NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/order">Order</NuxtLink>
+              <NuxtLink class="nav-link" to="/order">Bestellen</NuxtLink>
             </li>
             <li class="nav-item ms-auto">
               <NuxtLink class="nav-link" to="/admin">Admin</NuxtLink>

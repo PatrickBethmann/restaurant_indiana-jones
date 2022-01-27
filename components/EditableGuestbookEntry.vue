@@ -11,13 +11,21 @@
       class="bg-dark text-light"
       placeholder="Name"
     />
-    <span>Datum:</span>
+    <span>Nachricht:</span>
+    <b-input
+      id="message"
+      v-model="message"
+      class="bg-dark text-light"
+      type="text"
+      placeholder="Nachricht"
+    />
+    <!-- <span>Datum:</span>
     <b-input
       id="date"
       v-model="date"
       class="bg-dark text-light"
       type="date"
-      placeholder="Name"
+      placeholder="Datum"
     />
     <span>Uhrzeit:</span>
     <b-input
@@ -25,8 +33,8 @@
       v-model="time"
       class="bg-dark text-light"
       type="time"
-      placeholder="Name"
-    />
+      placeholder="Uhrzeit"
+    /> -->
 
     <b-button variant="outline-primary" @click="deleteEntry()">Delete</b-button>
     <b-button variant="outline-success" @click="saveEntry()"
@@ -50,12 +58,14 @@ export default {
   data() {
     return {
       name: '',
+      message: '',
       date: '',
       time: '',
     }
   },
   mounted() {
     this.name = this.entry.name
+    this.message = this.entry.message
     this.date = this.entry.date
     this.time = this.entry.time
   },
@@ -68,6 +78,7 @@ export default {
         'updateEntry',
         {
           name: this.name,
+          message: this.message,
           date: this.date,
           time: this.time,
         },

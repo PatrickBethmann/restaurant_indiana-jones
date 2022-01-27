@@ -108,7 +108,7 @@ export default {
     },
     createEntry() {
       const date = new Date()
-      const currentDate = `${date.toLocaleDateString()}`
+      const currentDate = date.toLocaleDateString()
       const currentTime = `${
         date.getHours() < 10 ? '0' : ''
       }${date.getHours()}:${date.getMinutes()} Uhr`
