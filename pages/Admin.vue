@@ -56,14 +56,13 @@
         @deleteEntry="deleteEntry"
         @updateEntry="updateEntry"
       />
+      <b-button
+        v-if="loggedIn"
+        class="w-25 mt-2 mb-2 text-dark bg-light"
+        @click="loggedIn = false"
+        >Log out</b-button
+      >
     </div>
-
-    <b-button
-      v-if="loggedIn"
-      class="w-25 mt-2 mb-2 text-dark bg-light"
-      @click="loggedIn = false"
-      >Log out</b-button
-    >
   </div>
 </template>
 
