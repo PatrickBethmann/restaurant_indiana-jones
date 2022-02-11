@@ -28,14 +28,12 @@ export default {
         {
           name: 'Soup',
           price: 1.99,
-          image:
-            'https://cdn-icons.flaticon.com/png/512/2387/premium/2387954.png?token=exp=1643281638~hmac=e1d722fdb83dc429b8d39a1d1077f306',
+          image: 'https://cdn-icons-png.flaticon.com/512/454/454570.png',
         },
         {
           name: 'Fish',
           price: 4.99,
-          image:
-            'https://cdn-icons.flaticon.com/png/512/2346/premium/2346909.png?token=exp=1643281672~hmac=1af497e6f69e0a2b8e8fea167d795e77',
+          image: 'https://cdn-icons-png.flaticon.com/512/3280/3280126.png',
         },
         {
           name: 'Ice',
