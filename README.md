@@ -11,6 +11,7 @@ https://patrickbethmann.github.io/restaurant_indiana-jones/
 To try out the Admin-Page:
 
 Username: Admin
+
 Password: 12345
 
 ## Preview
